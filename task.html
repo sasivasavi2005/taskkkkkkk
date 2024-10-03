@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Management System</title>
+    <link rel="stylesheet" href="task.css" />
+  </head>
+  <body>
+    <div class="landd">
+    <button id="theme-toggle">Change theme</button>
+</div>
+
+    <div class="container">
+      <h1>Task Management System</h1>
+      <div class="users"></div>
+      <button onclick="openTaskModal()">Create New Task</button>
+      
+      <h2>Total Tasks: <span id="total-tasks">0</span></h2>
+      <div id="registration" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2>Register a New Task</h2>
+          <form id="registration-form">
+            <label for="task-name">Task Name:</label>
+            <input type="text" id="task-name" name="task-name" required />
+            <label for="task-description">Task Description:</label>
+            <textarea id="task-description"name="task-description"required></textarea>
+            <label for="due-date">Due Date:</label>
+            <input type="date" id="due-date" name="due-date" required />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+        <button id="pending">Show Pending Tasks</button>
+        <button id="completed">Show Completed Tasks</button>
+      </div>
+
+      <h2>Pending Tasks</h2>
+      <table id="pending-tasks-table" class="task-table">
+        <thead>
+          <tr>
+            <th>Task Name</th>
+            <th>Description</th>
+            <th>Due Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="pendingtasks"></tbody>
+      </table>
+
+      <h2>Completed Tasks</h2>
+      <table id="completed-tasks-table" class="task-table">
+        <thead>
+          <tr>
+            <th>Task Name</th>
+            <th>Description</th>
+            <th>Due Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="completedtasks"></tbody>
+      </table>
+    </div>
+
+    <div id="registration" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Register a New Task</h2>
+        <form id="registration-form">
+          <label for="task-name">Task Name:</label>
+          <input type="text" id="task-name" name="task-name" required />
+          <label for="task-description">Task Description:</label>
+          <textarea id="task-description" name="task-description"required></textarea>
+          <label for="due-date">Due Date:</label>
+          <input type="date" id="due-date" name="due-date" required />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div id="popup-message" class="popup-message"></div>
+    <script src="task.js"></script>
+  </body>
+</html>
+
