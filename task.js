@@ -1,4 +1,3 @@
-// Get modal elements
 const taskModal = document.getElementById("registration");
 const registerUserBtn = document.getElementById("register-user-btn");
 const closeUserBtn = document.getElementsByClassName("close-user-btn")[0];
