@@ -16,10 +16,8 @@ function toggleTheme() {
     themeToggleButton.textContent = "Change Theme";
   } else {
     themeToggleButton.textContent = "Change Theme";
-  }
-}
+  } }
 themeToggleButton.addEventListener("click", toggleTheme);
-
 let tasks = [];
 function openTaskModal() {
   taskModal.style.display = "block";
